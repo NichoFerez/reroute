@@ -5,25 +5,88 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 	body{
-position: relative;
+
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-size: auto;
 		background-position:  center center;
 height: 100vh;
 width: 100vw;
-		background-image: linear-gradient(180deg, #F2FFE6 0%, #5FBD00 100%);
+font-family: Amaranth;
+		background: linear-gradient(180deg, #F2FFE6 0%, #5FBD00 100%);
 	}
-	.background{
-	
+	.maintext{
+
+width: 100vw;
+height: 100vh;
+
+ grid-column-start: 1;
+ grid-column-end: 3;
+ grid-row-start: 1;
+ grid-row-end: 3;
+
+font-style: normal;
+font-weight: bold;
+font-size: 32.5px;
+line-height: 39px;
+text-align: center;
+
+color: #000000;
+
 	}
+	.options{
+		font-style: normal;
+		font-size: 25px;
+		grid-column-start: 1;
+ grid-column-end: 3;
+ grid-row-start: 2;
+ grid-row-end: 2;
+ background-color: blue;
+
+	}
+.grid-container{
+	position: absolute;
+	display:grid;
+	background-color: red;
+
+  grid-template-columns: repeat(3, 50%);
+  grid-template-rows:repeat(3, 50%);
+  height:100vh;
+  width:100vw;
+
+}
+.button{
+	position: absolute;
+	align-content: right;
+	height: 100px;
+	width: 100px;
+	grid-column-start: 1;
+ grid-column-end: 3;
+ grid-row-start: 3;
+ grid-row-end: 3;
+}
 </style>
 <script src=""></script>
 <body>
 
-<div class="background">
-</div>
+	<div class="grid-container">
 
+<div class="maintext">
+	<b>Hello, what are you looking for today?</b>
+	
+</div>
+<div class="options">
+	<div class="option1">Groceries</div>
+	<div class="option2">Personal Care</div>
+	<div class="option3">Gifts</div>
+	<div class="option4">Electronics</div>
+	<div class="option5">Clothing & Accessories</div>
+</div>
+<div class="button">
+	<b>Re-route</b>
+</div>
+</div>
 </body>
 </html>
